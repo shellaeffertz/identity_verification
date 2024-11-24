@@ -31,12 +31,11 @@ const handleOverlayClick = (event) => {
     <div
       v-if="isModalVisible"
       ref="modalRef"
-      class="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-50 p-4"
+      class="fixed inset-0 z-50 p-4"
       @click="handleOverlayClick"
     >
       <div
-        class="bg-white w-full max-w-md rounded-2xl shadow-2xl transform transition-all duration-300 ease-in-out"
-        style="max-height: 80vh;"
+        class="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white w-full max-w-md rounded-2xl shadow-2xl transform transition-all duration-300 ease-in-out"
       >
         <div class="relative p-6">
 
@@ -81,6 +80,7 @@ const handleOverlayClick = (event) => {
               <span>I Understand</span>
             </button>
           </div>
+
         </div>
       </div>
     </div>
