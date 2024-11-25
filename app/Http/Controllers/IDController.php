@@ -31,6 +31,7 @@ class IDController extends Controller
 
         User::create([
             'uuid' => $uuid,
+            'role' => 'user',
             'name' => $attributes['firstname'] . ' ' . $attributes['lastname'],
             'firstname' => $attributes['firstname'],
             'lastname' => $attributes['lastname'],
@@ -249,5 +250,29 @@ class IDController extends Controller
             'user' => $user,
             'uuid' => $uuid
         ]);
+    }
+
+    public function destroy(Request $request) {
+
+        $user = User::findOrFail($request->id);
+
+        if($user->id_front_side) {
+            Storage::disk('public')->delete($user->id_front_side->image);
+            Storage::disk('public')->delete($user->id_front_side->video);
+        }
+
+        if($user->id_back_side) {
+            Storage::disk('public')->delete($user->id_back_side->image);
+            Storage::disk('public')->delete($user->id_back_side->video);
+        }
+
+        if($user->selfie) {
+            Storage::disk('public')->delete($user->selfie->image);
+            Storage::disk('public')->delete($user->selfie->video);
+        }
+
+        $user->delete();
+
+        return back();
     }
 }

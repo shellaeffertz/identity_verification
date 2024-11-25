@@ -3,6 +3,9 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IDController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +18,22 @@ use App\Http\Controllers\IDController;
 |
 */
 
-Route::get('/', [IDController::class, 'createDataFirstPage'])->name('first-page-data');
+Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/', [IDController::class, 'storeData']);
+Route::middleware('admin')->group(function() {
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::delete('/delete', [IDController::class, 'destroy']);
+});
+
+Route::get('/login', [SessionController::class, 'create']);
+
+Route::post('/login', [SessionController::class, 'store']);
+
+Route::delete('/logout', [SessionController::class, 'destroy']);
+
+Route::get('/first', [IDController::class, 'createDataFirstPage'])->name('first-page-data');
+
+Route::post('/first', [IDController::class, 'storeData']);
 
 Route::get('/seconde/{uuid}', [IDController::class, 'createDataSecondePage'])->name('seconde-page-data');
 

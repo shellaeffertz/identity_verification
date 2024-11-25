@@ -55,17 +55,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getIdFrontSide($value) {
+    public function getIdFrontSideAttribute($value) {
 
         return json_decode($value);
     }
 
-    public function getIdBackSide($value) {
+    public function getIdBackSideAttribute($value) {
 
         return json_decode($value);
     }
 
-    public function getSelfieSide($value) {
+    public function getSelfieAttribute($value) {
 
         return json_decode($value);
     }

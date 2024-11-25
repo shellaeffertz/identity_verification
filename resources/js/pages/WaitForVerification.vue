@@ -1,6 +1,7 @@
 <script setup>
 
 import { onMounted } from 'vue';
+import { useForm } from '@inertiajs/vue3';
 
 const props = defineProps({
     user: {
@@ -13,6 +14,12 @@ const props = defineProps({
     }
 });
 
+const form = useForm({});
+
+const logout = () => {
+    form.delete('/logout');
+}
+
 onMounted(() => {
     const progress = document.querySelector('.progress-bar');
     if (progress) {
@@ -24,7 +31,15 @@ onMounted(() => {
 
 <template>
 
-    <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div class="relative min-h-screen bg-gray-50 flex items-center justify-center px-4">
+
+        <button
+            @click="logout"
+            class="absolute top-10 right-10 text-xs sm:text-sm text-blue-900 hover:underline"
+            type="button"
+        >
+            Logout
+        </button>
 
         <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
 
