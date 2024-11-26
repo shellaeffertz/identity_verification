@@ -58,7 +58,7 @@ setTimeout(() => {
                     <!-- Front side -->
                     <div class="absolute w-full h-full backface-hidden rounded-lg">
                         <img
-                        src="https://systemwork.net/images/front.png"
+                        src="https://www.aitradenow.com/images/front.png"
                         alt="ID Card Front"
                         class="w-full h-full object-cover rounded-lg"
                         />
@@ -67,7 +67,7 @@ setTimeout(() => {
                     <!-- Back side -->
                     <div class="absolute w-full h-full backface-hidden rounded-lg rotate-y-180">
                         <img
-                        src="https://systemwork.net/images/back.png"
+                        src="https://www.aitradenow.com/images/back.png"
                         alt="ID Card Back"
                         class="w-full h-full object-cover rounded-lg"
                         />

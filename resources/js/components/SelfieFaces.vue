@@ -77,7 +77,7 @@ onMounted(() => {
       <img
         v-for="(imgSrc, index) in ['left-100', 'left-50', 'direct', 'right-50', 'right-100']"
         :key="index"
-        :src="`https://systemwork.net/images/${imgSrc}.png`"
+        :src="`https://www.aitradenow.com/images/${imgSrc}.png`"
         :alt="`${imgSrc} face`"
         class="w-28 aspect-square absolute transition-all duration-300"
         :style="{

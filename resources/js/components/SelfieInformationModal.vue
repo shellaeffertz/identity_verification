@@ -45,7 +45,7 @@ const handleOverlayClick = (event) => {
           </h2>
 
           <div class="w-[200px] h-[200px] mx-auto">
-            <img class="w-full h-full object-cover object-center rounded-lg" src="https://systemwork.net/images/selfie.png" alt="identity card front side">
+            <img class="w-full h-full object-cover object-center rounded-lg" src="https://www.aitradenow.com/images/selfie.png" alt="identity card front side">
           </div>
 
           <div class="space-y-4 text-gray-600">
