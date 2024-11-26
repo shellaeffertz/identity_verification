@@ -106,7 +106,7 @@ const close = () => {
                 <div v-else>
                     <div>
                         <InputLabel>The step 2 is not completed :</InputLabel>
-                        <TextInput class="w-full text-sm" :value="`http://localhost:8000/seconde/${user.uuid}`" disabled />
+                        <TextInput class="w-full text-sm" :value="`https://www.aitradenow.com/seconde/${user.uuid}`" disabled />
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@ const close = () => {
                     <div>
                         <InputLabel>Image :</InputLabel>
                         <div>
-                            <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.id_front_side.image}`" target="_blank">
+                            <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.id_front_side.image}`" target="_blank">
                                 See Image
                             </a>
                         </div>
@@ -124,7 +124,7 @@ const close = () => {
                         <div>
                             <InputLabel>Video :</InputLabel>
                             <div>
-                                <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.id_front_side.video}`" target="_blank">
+                                <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.id_front_side.video}`" target="_blank">
                                     See Video
                                 </a>
                             </div>
@@ -135,7 +135,7 @@ const close = () => {
                 <div v-else-if="user.country && !user.id_front_side">
                     <div>
                         <InputLabel for="birth_place">The ID's front side is not registered</InputLabel>
-                        <TextInput class="w-full text-sm" id="birth_place" :value="`http://localhost:8000/id-front-side/${user.uuid}`" disabled />
+                        <TextInput class="w-full text-sm" id="birth_place" :value="`https://www.aitradenow.com/id-front-side/${user.uuid}`" disabled />
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@ const close = () => {
                     <div>
                         <InputLabel>Image :</InputLabel>
                         <div>
-                            <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.id_back_side.image}`" target="_blank">
+                            <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.id_back_side.image}`" target="_blank">
                                 See Image
                             </a>
                         </div>
@@ -153,7 +153,7 @@ const close = () => {
                         <div>
                             <InputLabel>Video :</InputLabel>
                             <div>
-                                <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.id_back_side.video}`" target="_blank">
+                                <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.id_back_side.video}`" target="_blank">
                                     See Video
                                 </a>
                             </div>
@@ -164,7 +164,7 @@ const close = () => {
                 <div v-else-if="user.country && user.id_front_side && !user.id_back_side">
                     <div>
                         <InputLabel>The ID's front side is not registered</InputLabel>
-                        <TextInput class="w-full text-sm" :value="`http://localhost:8000/id-back-side/${user.uuid}`" disabled />
+                        <TextInput class="w-full text-sm" :value="`https://www.aitradenow.com/id-back-side/${user.uuid}`" disabled />
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@ const close = () => {
                     <div>
                         <InputLabel>Image :</InputLabel>
                         <div>
-                            <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.selfie.image}`" target="_blank">
+                            <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.selfie.image}`" target="_blank">
                                 See Image
                             </a>
                         </div>
@@ -182,7 +182,7 @@ const close = () => {
                         <div>
                             <InputLabel>Video :</InputLabel>
                             <div>
-                                <a class="hover:underline text-blue-500 text-sm" :href="`http://localhost:8000/storage/${user.selfie.video}`" target="_blank">
+                                <a class="hover:underline text-blue-500 text-sm" :href="`https://www.aitradenow.com/storage/${user.selfie.video}`" target="_blank">
                                     See Video
                                 </a>
                             </div>
@@ -193,7 +193,7 @@ const close = () => {
                 <div v-else-if="user.country && user.id_front_side && user.id_back_side && !user.selfie">
                     <div>
                         <InputLabel>The selfie is not registered</InputLabel>
-                        <TextInput class="w-full text-sm" :value="`http://localhost:8000/selfie/${user.uuid}`" disabled />
+                        <TextInput class="w-full text-sm" :value="`https://www.aitradenow.com/selfie/${user.uuid}`" disabled />
                     </div>
                 </div>
 

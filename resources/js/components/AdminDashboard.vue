@@ -51,7 +51,7 @@ const submitDeleteUser = () => {
             class="bg-white shadow-md rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl"
         >
             <img
-                :src="user.selfie ? `http://localhost:8000/storage/${user.selfie.image}` : 'http://localhost:8000/images/unknown_user.png'"
+                :src="user.selfie ? `https://www.aitradenow.com/storage/${user.selfie.image}` : 'https://www.aitradenow.com/images/unknown_user.png'"
                 :alt="`${user.name}'s avatar`"
                 class="w-full h-48 object-contain object-center"
             />
