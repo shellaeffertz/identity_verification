@@ -6,6 +6,7 @@ use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -29,7 +30,7 @@ class IDController extends Controller
 
         $uuid = Str::uuid();
 
-        User::create([
+        $user = User::create([
             'uuid' => $uuid,
             'role' => 'user',
             'name' => $attributes['firstname'] . ' ' . $attributes['lastname'],
@@ -38,6 +39,8 @@ class IDController extends Controller
             'email' => $attributes['email'],
             'password' => Hash::make($attributes['password'])
         ]);
+
+        Auth::login($user);
 
         return redirect()->route('seconde-page-data', $uuid);
     }

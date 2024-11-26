@@ -1,5 +1,6 @@
 <script setup>
 
+import Background from '../components/Background.vue';
 import FormDataSecondPage from '../components/FormDataSecondPage.vue';
 
 defineProps({
@@ -16,6 +17,8 @@ defineProps({
 </script>
 
 <template>
+
+    <Background />
 
     <FormDataSecondPage :countries="countries" :uuid="uuid" />
 

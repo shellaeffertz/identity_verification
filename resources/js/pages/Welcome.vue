@@ -1,16 +1,51 @@
 <script setup>
 
-import { Link } from '@inertiajs/vue3';
+import Market from '../components/Market.vue';
+import Navbar from '../components/Navbar.vue';
+import HomeSection from '../components/HomeSection.vue';
+import Background from '../components/Background.vue';
+import FooterSection from '../components/FooterSection.vue';
 
 </script>
 
 <template>
 
-    <nav class="bg-gray-100 shadow-md flex justify-end">
-        <div class="max-w-md mx-auto px-6 py-4 flex items-center gap-4">
-            <Link class="hover:underline hover:text-gray-500" href="/login">Login</Link>
-            <Link class="hover:underline hover:text-gray-500" href="/first">Register</Link>
-        </div>
-    </nav>
+    <Background />
+
+    <Navbar />
+
+    <HomeSection />
+
+    <Market class="mb-16" />
+
+    <FooterSection />
 
 </template>
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e3a8a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fbbf24;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+</style>

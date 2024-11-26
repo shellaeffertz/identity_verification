@@ -1,5 +1,6 @@
 <script setup>
 
+import { Link } from '@inertiajs/vue3';
 import TextInput from './TextInput.vue';
 import InputLabel from './InputLabel.vue';
 import { useForm } from '@inertiajs/vue3';
@@ -35,15 +36,21 @@ const submitData = () => {
 
 <template>
 
-    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-6">
-        <div class="bg-white shadow-2xl rounded-xl overflow-hidden w-full max-w-4xl">
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="bg-white shadow-2xl rounded-xl overflow-hidden w-full md:w-[30%] xlg:w-1/4 max-w-4xl">
 
-            <div class="p-8 bg-gray-50 border-b border-gray-200">
-                <h2 class="text-3xl font-bold text-gray-800 text-center">
-                    Personal Verification
-                </h2>
-                <p class="text-center text-gray-600 mt-2">
-                    Please provide your personal details for verification
+            <div class="p-8 bg-gray-200 border-b border-b-blue-900">
+                <div class="flex items-center w-fit mx-auto mb-8">
+                    <Link
+                        href="/"
+                        class="flex items-center transform hover:scale-105 transition-transform duration-300 group"
+                    >
+                        <i class="fa-brands fa-bitcoin text-6xl text-yellow-400 group-hover:rotate-[360deg] transition-transform duration-700"></i>
+                        <span class="ml-3 text-3xl font-bold text-blue-900 transition-colors duration-300">TradeNow</span>
+                    </Link>
+                </div>
+                <p class="text-center text-blue-900 mt-2 font-bold">
+                    Please provide the requested information to create an account
                 </p>
             </div>
 

@@ -32,14 +32,18 @@ const deleteUser = (user) => {
 
 const submitDeleteUser = () => {
     form.id = newUser.value.id;
-    form.delete('/delete');
+    form.delete('/delete', {
+        onSuccess: () => {
+            showDeleteUserModal.value = false;
+        }
+    });
 }
 
 </script>
 
 <template>
 
-    <div class="max-w-7xl px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div v-if="users.data.length != 0" class="max-w-7xl px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
 
         <div
             v-for="user in users.data"
@@ -71,6 +75,10 @@ const submitDeleteUser = () => {
         </div>
 
     </div>
+
+    <p v-else class="text-gray-500 text-sm text-center">
+        * No Data Found *
+    </p>
 
     <ShowUser :user="newUser" :show="showUserModal" @close="showUserModal = false" />
 
